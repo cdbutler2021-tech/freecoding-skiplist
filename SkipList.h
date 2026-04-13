@@ -1,6 +1,5 @@
 #pragma once
 #include "coin_flip.h"
-#include <iostream>
 
 template<class T>
 
