@@ -1,6 +1,5 @@
 #pragma once
 #include "coin_flip.h"
-#include <iostream>
 
 template<class T>
 
@@ -215,38 +214,5 @@ public:
             destroy(b->next);
         }
         num_items = 0;
-    }
-
-    void print() {
-        Node* head = start;
-        Node* curr;
-        Node* base = start;
-        while (base->below != nullptr) {
-            base = base->below;
-        }
-        Node* ibase;
-
-        while (head != nullptr) {
-            curr = head;
-            ibase = base;
-            while (curr != nullptr) {
-                while (!(*ibase == *curr)) {
-                    std::cout << "  ";
-                    if (!ibase->is_sentinel() and ibase->value >= 10) {
-                        std::cout << " ";
-                    }
-                    ibase = ibase->next;
-                }
-                if (curr->is_sentinel()) {
-                    std::cout << '_' << ' ';
-                } else {
-                    std::cout << curr->value << ' ';
-                }
-                curr = curr->next;
-                ibase = ibase->next;
-            }
-            std::cout << std::endl;
-            head = head->below;
-        }
     }
 };
