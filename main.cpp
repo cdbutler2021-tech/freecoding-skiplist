@@ -1,7 +1,5 @@
 #include <iostream>
-
 #include "SkipList.h"
-#include <vector>
 
 using namespace std;
 
